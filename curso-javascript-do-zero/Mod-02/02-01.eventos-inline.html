@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Eventos inline</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <button onclick="mostrarAlerta()">Mostrar alerta</button>
+
+    <button onmouseover="mostrarAlerta()">Passar o mouse no botão</button>
+    <input type="text" onkeypress="mensagemNaTela()">
+
+  </div>
+
+  <script>
+    function mensagemNaTela() {
+      alert('Messagem na tela');
+    }
+    function mostrarAlerta() {
+      alert('O botão foi clicado');
+    }
+  </script>
+</body>
+
+</html>

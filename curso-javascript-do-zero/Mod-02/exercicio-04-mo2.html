@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exercicio Mod02</title>
+</head>
+
+<body>
+  <div id="app">
+    <input class="inputName" type="text" placeholder="Digite seu nome" />
+    <button onclick="addName()">Adiconar nome</button>
+    <ul id="listElements"></ul>
+  </div>
+  </div>
+
+  <script>
+    /*
+      4º exercício
+        Seguindo o resultado do exercício anterior adicione um input em tela e um botão como a seguir:
+        <input type="text" name="nome">
+        <button onClick="adicionar()">Adicionar</button>
+        Ao clicar no botão, a função adicionar() deve ser disparada adicionando um novo item a lista de nomes baseado no nome preenchido no input e renderizando o novo item em tela juntos aos
+        demais itens anteriores. Além disso, o conteúdo do input deve ser apagado após o clique.
+    */
+    var names = ["Diego", "Gabriel", "Lucas"];
+    var listElements = document.querySelector('#listElements');
+    var inputElement = document.querySelector('.inputName');
+
+    function addItem(value) {
+
+      var liElement = document.createElement('li');
+      var textElement = document.createTextNode(value);
+
+      liElement.appendChild(textElement);
+      listElements.appendChild(liElement);
+    }
+
+    function addName() {
+      addItem(inputElement.value);
+      inputElement.value = '';
+    }
+
+    for (name of names) {
+      addItem(name);
+    }
+  </script>
+</body>
+
+</html>

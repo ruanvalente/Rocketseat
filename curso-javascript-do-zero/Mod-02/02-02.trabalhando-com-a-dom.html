@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Trabalhando com a DOM</title>
+</head>
+
+<body>
+
+  <div id="app">
+
+    <input type="text" name="nome" id="nome" />
+    <button class="botao">Mostrar valor do input</button>
+  </div>
+
+  <script>
+
+    // Buscando elementos por ID
+    // var inputElement = document.getElementById('nome');
+    // console.log( inputElement );
+
+    // Buscando elementos por tag como retorna um array-like podemos acessar o primeiro elemento com a anotação de array.
+
+    // var inputElement = document.getElementsByTagName('input')[0];
+    // console.log( inputElement );
+
+    // Buscando elementos por class, assim como o TagName o mesmo retorna o um array-like.
+
+    //   var inputElement = document.getElementsByClassName('botao').length;
+
+    //   console.log(inputElement);
+
+    // Buscando elementos usando o querySelector.
+    // Com o querySelector, podemos navegar de forma ainda mais simples e objetiva
+    // Podemos dizer exatamento onde o nosso elemento se encontra na DOM.
+    // Também podemos acessar esses elementos pelo seu atribuito.
+
+    // var buttonElement = document.querySelector('div#app .botao');
+    // console.log(buttonElement);
+
+    // // Acessando elemento pelo seu atribuito
+    // var inputElement = document.querySelector('input[name=nome]');
+    // console.log(inputElement);
+
+    //  Exemplo.
+
+    var inputElement = document.querySelector('input[name=nome');
+    var buttonElement = document.querySelector('button.botao');
+
+    buttonElement.onclick = function () {
+      var text = inputElement.value;
+      alert('O valor do input é: ' + text);
+    }
+  </script>
+</body>
+
+</html>
